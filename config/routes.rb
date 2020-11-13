@@ -18,8 +18,14 @@ Rails.application.routes.draw do
     resources :categories, except: [:edit, :update, :show, :destroy]
   end
 
+  # Route for about page
   get 'about', to: 'abouts#show'
 
+  # These routes will be for signup. The first renders a form in the browse, the second will 
+  # receive the form and create a user in our database using the data given to us by the user.
+  get '/signup', to: 'users#new'
+  post '/users', to: 'users#create'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
