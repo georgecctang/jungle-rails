@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   # Route for about page
-  get '/about', to: 'abouts#show'
+  get '/about', to: 'about#show'
 
   # These routes will be for signup. The first renders a form in the browse, the second will 
   # receive the form and create a user in our database using the data given to us by the user.
